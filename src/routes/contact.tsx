@@ -5,7 +5,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { InquiryForm } from "@/components/site/InquiryForm";
 import { site, whatsappLink } from "@/lib/site";
-import { FaWhatsapp } from "react-icons/fa";
+
 
 const TITLE = "Contact M.R Spice Export | Request an Export Quote";
 const DESCRIPTION =
@@ -44,7 +44,7 @@ function Contact() {
     { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
     { icon: Phone, label: "Telephone", value: site.phone, href: `tel:${site.phone.replace(/\s/g, "")}` },
     {
-      icon: FaWhatsapp,
+      icon: MessageCircle,
       label: "WhatsApp",
       value: "Chat with our export desk",
       href: whatsappLink("Hello M.R Spice Export, I would like to request a quotation."),

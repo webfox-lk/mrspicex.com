@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import heroImage from "@/assets/hero-spices.jpg";
-import qualityImage from "@/assets/quality.jpg";
+import qualityImage from "@/assets/quality.png";
 import plantationImage from "@/assets/plantation.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -153,13 +153,13 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 const mapDots = [
-  { top: "35%", left: "32%" },
-  { top: "22%", left: "42%" },
-  { top: "56%", left: "51%" },
-  { top: "68%", left: "66%" },
-  { top: "36%", left: "60%" },
-  { top: "28%", left: "72%" },
-  { top: "63%", left: "39%" },
+  { label: "North America", top: "34%", left: "28%", textPosition: "left" },
+  { label: "South America", top: "62%", left: "38%", textPosition: "right" },
+  { label: "Europe", top: "26%", left: "56%", textPosition: "top" },
+  { label: "Africa", top: "70%", left: "55%", textPosition: "right" },
+  { label: "Middle East", top: "50%", left: "62%", textPosition: "top" },
+  { label: "Asia", top: "35%", left: "73%", textPosition: "right" },
+  { label: "Oceania", top: "72%", left: "81%", textPosition: "left" },
 ];
 
 function Index() {
@@ -382,8 +382,8 @@ function Index() {
       </section>
 
       {/* Worldwide Export */}
-      <section className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="py-12 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
 
           {/* Heading */}
           <div className="mx-auto max-w-3xl text-center">
@@ -391,39 +391,48 @@ function Index() {
               Global Reach
             </p>
 
-            <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight text-foreground md:text-5xl">
+            <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight text-foreground sm:mt-5 sm:text-4xl md:text-5xl">
               Exporting Sri Lankan Excellence Worldwide
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg">
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-base md:text-lg">
               Our containers move through Colombo Port to buyers across the
               Middle East, Europe, Asia, North America and Oceania.
             </p>
           </div>
 
-
           {/* World Map Box */}
-          <div className="relative mx-auto mt-16 h-[420px] w-full overflow-hidden rounded-[2rem] border border-border/60 bg-white shadow-[0_15px_40px_rgba(0,0,0,0.08)] md:h-[500px]">
+          <div className="relative mx-auto mt-10 aspect-[2/1] w-full overflow-hidden rounded-2xl border border-border/60 bg-white shadow-[0_15px_40px_rgba(0,0,0,0.08)] sm:mt-16 sm:rounded-[2rem]">
 
-            {/* Transparent World Map */}
+            {/* Map Image */}
             <img
               src={worldMap}
               alt="Worldwide export destinations from Sri Lanka"
-              className="absolute inset-0 z-0 h-full w-full object-contain p-8 md:p-12"
+              className="absolute inset-0 z-0 h-full w-full object-fill p-2 sm:p-4 md:p-6"
             />
 
-            {/* Blinking Export Locations */}
+            {/* Blinking Export Dots & Continent Labels */}
             {mapDots.map((d, i) => (
-              <span
+              <div
                 key={i}
-                aria-hidden="true"
-                className="absolute z-10 size-3 rounded-full bg-gold shadow-[0_0_0_6px_color-mix(in_oklab,var(--gold)_22%,transparent)]"
+                className="absolute z-10 flex items-center gap-2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                 style={{
                   top: d.top,
                   left: d.left,
-                  animation: `pulse-dot 2.8s ease-in-out ${i * 0.35}s infinite`,
+                  animation: `pulse-dot 6.8s ease-in-out ${i * 0.4}s infinite`,
                 }}
-              />
+              >
+                {/* Glowing Dot */}
+                <span className="relative flex size-2.5 sm:size-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
+                  <span className="relative inline-flex size-2.5 sm:size-3 rounded-full bg-gold shadow-[0_0_8px_rgba(212,175,55,0.8)]" />
+                </span>
+
+                {/* Continent Label Badge */}
+                <span className="whitespace-nowrap rounded-lg px-1.5 py-0.5 text-[2px] tracking-wide text-foreground shadow-sm border border-border/40 backdrop-blur-[2px] sm:px-2.5 sm:py-1 sm:text-[11px]">
+                  {d.label}
+                </span>
+              </div>
             ))}
 
           </div>
