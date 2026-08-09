@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useInquiry } from "./InquiryProvider";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -35,7 +36,7 @@ export function Navbar() {
           {/* Responsive Icon Image replacing "MR" text */}
           <div className="relative size-10 shrink-0 overflow-hidden rounded-full border border-primary/80  p-0.5 shadow-sm transition-transform duration-500 group-hover:rotate-6 sm:size-11">
             <img
-              src="src\assets\logo.png" // Change this to your logo asset path (e.g. /images/mr-logo.jpg or imported SVG/PNG)
+              src= {logo} // Change this to your logo asset path (e.g. /images/mr-logo.jpg or imported SVG/PNG)
               alt="M.R Spice Export Logo"
               className="h-full w-full rounded-full object-cover"
             />
