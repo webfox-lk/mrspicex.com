@@ -14,9 +14,9 @@ export function PageHero({
   alt: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-foreground pt-[72px]">
+    <section className="relative isolate overflow-hidden bg-black pt-[72px]">
       <img src={image} alt={alt} width={1600} height={900} className="absolute inset-0 -z-10 size-full object-cover opacity-45" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-foreground/70 via-foreground/60 to-foreground/85" aria-hidden="true" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-foreground/5 to-black/75" aria-hidden="true" />
       <div className="container-x py-24 sm:py-32">
         <Reveal className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">{eyebrow}</p>

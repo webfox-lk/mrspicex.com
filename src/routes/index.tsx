@@ -25,7 +25,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { useInquiry } from "@/components/site/InquiryProvider";
 import { featuredProducts } from "@/data/products";
 import { site, whatsappLink } from "@/lib/site";
-import worldMap from "@/assets/world-map.png";
+import worldMap from "@/assets/world-map.webp";
 
 
 const TITLE = "Sri Lankan Whole Spice Exporter | M.R Spice Export";

@@ -14,7 +14,7 @@ export function Footer() {
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             M.R SPICE EXPORT (PVT) LTD is committed to supplying premium Sri Lankan whole spices to buyers across the globe.
           </p>
-          <div className="mt-6 flex gap-2">
+          {/* <div className="mt-6 flex gap-2">
             <a href="https://www.linkedin.com/in/mrspicexport" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary">
               <Linkedin className="size-4" aria-hidden="true" />
             </a>
@@ -24,7 +24,7 @@ export function Footer() {
             <a href="https://www.instagram.com/mrspicexport" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary">
               <Instagram className="size-4" aria-hidden="true" />
             </a>
-          </div>
+          </div> */}
         </div>
 
         <nav aria-label="Quick links">

@@ -1,16 +1,16 @@
-import arecanut from "@/assets/product-arecanut.png";
-import cloves from "@/assets/product-cloves.png";
-import goraka from "@/assets/product-goraka.png";
-import pepper from "@/assets/product-pepper.png";
-import greenpepper from "@/assets/product-greenpepper.png";
-import whitepepper from "@/assets/product-whitepepper.png";
-import nutmeg from "@/assets/product-nutmeg.png";
-import mace from "@/assets/product-mace.png";
-import mixpepper from "@/assets/product-mixpepper.png";
-import charcoal from "@/assets/product-charcoal.png";
-import whitecoffee from "@/assets/product-whitecoffee.png";
-import blackcoffee from "@/assets/product-blackcoffee.png";
-import dehydratedpepper from "@/assets/dehyratedpepper.png";
+import arecanut from "@/assets/product-arecanut.webp";
+import cloves from "@/assets/product-cloves.webp";
+import goraka from "@/assets/product-goraka.webp";
+import pepper from "@/assets/product-pepper.webp";
+import greenpepper from "@/assets/product-greenpepper.webp";
+import whitepepper from "@/assets/product-whitepepper.webp";
+import nutmeg from "@/assets/product-nutmeg.webp";
+import mace from "@/assets/product-mace.webp";
+import mixpepper from "@/assets/product-mixpepper.webp";
+import charcoal from "@/assets/product-charcoal.webp";
+import whitecoffee from "@/assets/product-whitecoffee.webp";
+import blackcoffee from "@/assets/product-blackcoffee.webp";
+import dehydratedpepper from "@/assets/dehyratedpepper.webp";
 
 export type ProductCategory = "Bark & Aromatics" | "Seeds & Berries" | "Fruits & Nuts";
 
