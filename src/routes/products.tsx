@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 const TITLE = "Sri Lankan Whole Spices for Bulk Export | Products";
 const DESCRIPTION =
-  "Browse our export range of Sri Lankan whole spices: Ceylon cinnamon, black pepper, cloves, cardamom, nutmeg, mace, vanilla, arecanut and goraka — available in bulk.";
+  "Browse our export range of Sri Lankan whole spices: Ceylon cinnamon, black pepper, cloves, cardamom, nutmeg, mace, coffee, arecanut and goraka — available in bulk.";
 
 export const Route = createFileRoute("/products")({
   component: Products,

@@ -32,9 +32,15 @@ export function Navbar() {
     >
       <nav aria-label="Primary" className="container-x flex h-[72px] items-center justify-between gap-4">
         <Link to="/" className="group flex min-w-0 items-center gap-3" aria-label="M.R Spice Export home">
-          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-primary text-sm font-bold tracking-tight text-primary-foreground transition-transform duration-500 group-hover:rotate-6">
-            MR
-          </span>
+          {/* Responsive Icon Image replacing "MR" text */}
+          <div className="relative size-10 shrink-0 overflow-hidden rounded-full border border-primary/80  p-0.5 shadow-sm transition-transform duration-500 group-hover:rotate-6 sm:size-11">
+            <img
+              src="src\assets\logo.png" // Change this to your logo asset path (e.g. /images/mr-logo.jpg or imported SVG/PNG)
+              alt="M.R Spice Export Logo"
+              className="h-full w-full rounded-full object-cover"
+            />
+          </div>
+
           <span className="min-w-0">
             <span
               className={cn(

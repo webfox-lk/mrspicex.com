@@ -6,7 +6,7 @@ export const site = {
   email: "info@mrspicex.com",
   phone: "+94 78 756 9596",
   whatsapp: "+94787569596",
-  address: "1st floor, 96 Kandy Road, Mawathagama, Sri Lanka",
+  address: "1st Floor, 96 Kandy Road Mawathagama, Sri Lanka.",
   hours: "Tuesday to Sunday  8.00 AM – 6.00 PM",
   social: {
     linkedin: "https://www.linkedin.com/",

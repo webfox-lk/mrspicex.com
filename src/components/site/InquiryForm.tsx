@@ -100,7 +100,7 @@ export function InquiryForm({
           <label className={labelClass} htmlFor="if-name">
             Full name*
           </label>
-          <input id="if-name" className={fieldClass} value={values.fullName} onChange={set("fullName")} placeholder="Jane Fernando" autoComplete="name" required />
+          <input id="if-name" className={fieldClass} value={values.fullName} onChange={set("fullName")} placeholder="John Doe" autoComplete="name" required />
         </div>
         <div>
           <label className={labelClass} htmlFor="if-company">

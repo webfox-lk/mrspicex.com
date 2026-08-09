@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Compass, Eye, Flag, Leaf, ShieldCheck, Users } from "lucide-react";
 import plantationImage from "@/assets/plantation.jpg";
-import qualityImage from "@/assets/quality.jpg";
+import qualityImage from "@/assets/quality.png";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
