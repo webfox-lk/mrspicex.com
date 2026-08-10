@@ -15,14 +15,24 @@ export function Footer() {
             M.R SPICE EXPORT (PVT) LTD is committed to supplying premium Sri Lankan whole spices to buyers across the globe.
           </p>
           <div className="mt-6 flex gap-2">
-            <a href="https://www.linkedin.com/in/mrspicexport" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary">
+            <a href="https://www.linkedin.com/in/mohamedh-muzki-134a5b428?utm_source=share_via&utm_content=profile&utm_medium=member_ios" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary">
               <Linkedin className="size-4" aria-hidden="true" />
             </a>
-            <a href="https://www.facebook.com/mrspicexport" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary">
-              <Facebook className="size-4" aria-hidden="true" />
+            <a
+              href="https://wa.me/94787569596?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20Sri%20Lankan%20spices."
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary"
+            >
+              <FaWhatsapp className="size-4" aria-hidden="true" />
             </a>
-            <a href="https://www.instagram.com/mrspicexport" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary">
-              <Instagram className="size-4" aria-hidden="true" />
+            <a
+              href="mailto:info@mrspicex.com"
+              aria-label="Email"
+              className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition hover:border-primary hover:text-primary"
+            >
+              <Mail className="size-4" aria-hidden="true" />
             </a>
           </div>
         </div>

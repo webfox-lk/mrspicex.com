@@ -177,7 +177,7 @@ function Index() {
           fetchPriority="high"
           className="absolute inset-0 -z-10 size-full object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/85 via-foreground/65 to-foreground/80" aria-hidden="true" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-black/80 via-foreground/50 to-black/80" aria-hidden="true" />
         <div aria-hidden="true" className="pointer-events-none absolute -left-24 top-24 -z-10 size-72 rounded-full bg-primary/25 blur-3xl [animation:float-slow_14s_ease-in-out_infinite]" />
         <div aria-hidden="true" className="pointer-events-none absolute -right-16 bottom-16 -z-10 size-80 rounded-full bg-gold/20 blur-3xl [animation:float-slow_18s_ease-in-out_infinite]" />
 
@@ -282,55 +282,55 @@ function Index() {
       </section>
 
       {/* Export process */}
-<section className="py-24 sm:py-32">
-  <div className="container-x">
-    <SectionHeading
-      eyebrow="How It Works"
-      title="Our Export Process"
-      intro="Four transparent steps from first message to delivered container."
-    />
-    <div className="relative mt-20">
-      {/* Horizontal connecting line for desktop */}
-      <div
-        aria-hidden="true"
-        className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-primary/35 to-transparent lg:block"
-      />
+      <section className="py-24 sm:py-32">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="How It Works"
+            title="Our Export Process"
+            intro="Four transparent steps from first message to delivered container."
+          />
+          <div className="relative mt-20">
+            {/* Horizontal connecting line for desktop */}
+            <div
+              aria-hidden="true"
+              className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-primary/35 to-transparent lg:block"
+            />
 
-      {/* Vertical connecting line for mobile */}
-      <div
-        aria-hidden="true"
-        className="absolute bottom-7 left-7 top-7 w-px bg-gradient-to-b from-transparent via-primary/35 to-transparent lg:hidden"
-      />
+            {/* Vertical connecting line for mobile */}
+            <div
+              aria-hidden="true"
+              className="absolute bottom-7 left-7 top-7 w-px bg-gradient-to-b from-transparent via-primary/35 to-transparent lg:hidden"
+            />
 
-      <ol className="grid gap-10 lg:grid-cols-4 lg:gap-10">
-        {steps.map((s, i) => (
-          <Reveal
-            key={s.title}
-            delay={i * 140}
-            as="li"
-            className="relative flex flex-row items-start gap-6 lg:flex-col lg:gap-0"
-          >
-            {/* Icon box */}
-            <span className="relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl border border-primary/20 bg-card text-primary shadow-soft">
-              <s.icon className="size-5" aria-hidden="true" />
-            </span>
+            <ol className="grid gap-10 lg:grid-cols-4 lg:gap-10">
+              {steps.map((s, i) => (
+                <Reveal
+                  key={s.title}
+                  delay={i * 140}
+                  as="li"
+                  className="relative flex flex-row items-start gap-6 lg:flex-col lg:gap-0"
+                >
+                  {/* Icon box */}
+                  <span className="relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl border border-primary/20 bg-card text-primary shadow-soft">
+                    <s.icon className="size-5" aria-hidden="true" />
+                  </span>
 
-            {/* Content block */}
-            <div className="flex-1 lg:mt-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                Step {i + 1}
-              </p>
-              <h3 className="mt-2 text-lg font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {s.text}
-              </p>
-            </div>
-          </Reveal>
-        ))}
-      </ol>
-    </div>
-  </div>
-</section>
+                  {/* Content block */}
+                  <div className="flex-1 lg:mt-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                      Step {i + 1}
+                    </p>
+                    <h3 className="mt-2 text-lg font-bold">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {s.text}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
 
       {/* Quality commitment */}
       <section className="bg-card py-24 sm:py-32">
