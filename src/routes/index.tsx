@@ -115,32 +115,58 @@ const spiceQualities = [
 ];
 
 const stats = [
-  { value: 25, suffix: "+", label: "Export destinations" },
+  { value: "ISO", suffix: "", label: "Certified Standards", isText: true },
   { value: 13, suffix: "", label: "Whole spice lines" },
   { value: 100, suffix: "%", label: "Sri Lankan origin" },
   { value: 24, suffix: "hr", label: "Inquiry response" },
 ];
 
-function Counter({ value, suffix }: { value: number; suffix: string }) {
+function Counter({
+  value,
+  suffix,
+}: {
+  value: number | string;
+  suffix: string;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [display, setDisplay] = useState(0);
+  const [display, setDisplay] = useState<number | string>(
+    typeof value === "number" ? 0 : value
+  );
 
   useEffect(() => {
+    if (typeof value !== "number") {
+      setDisplay(value);
+      return;
+    }
+
     const node = ref.current;
     if (!node) return;
+
     const observer = new IntersectionObserver((entries) => {
       if (!entries[0]?.isIntersecting) return;
+
       observer.disconnect();
+
       const duration = 1400;
       const start = performance.now();
+
       const tick = (now: number) => {
         const p = Math.min((now - start) / duration, 1);
-        setDisplay(Math.round(value * (1 - Math.pow(1 - p, 3))));
-        if (p < 1) requestAnimationFrame(tick);
+
+        setDisplay(
+          Math.round(value * (1 - Math.pow(1 - p, 3)))
+        );
+
+        if (p < 1) {
+          requestAnimationFrame(tick);
+        }
       };
+
       requestAnimationFrame(tick);
     });
+
     observer.observe(node);
+
     return () => observer.disconnect();
   }, [value]);
 
@@ -223,9 +249,16 @@ function Index() {
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90} className="text-center">
               <p className="font-display text-4xl font-bold text-primary">
-                <Counter value={s.value} suffix={s.suffix} />
+                {s.isText ? (
+                  <span>{s.value}</span>
+                ) : (
+                  <Counter value={s.value} suffix={s.suffix} />
+                )}
               </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.16em] text-muted-foreground">{s.label}</p>
+
+              <p className="mt-2 text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                {s.label}
+              </p>
             </Reveal>
           ))}
         </div>
